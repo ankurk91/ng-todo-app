@@ -28,11 +28,14 @@ export class AppComponent {
       completed: false
     });
 
+    // Reset input value
     this.newTask = null;
   }
 
   deleteTask(index) {
-    this.tasks.splice(index, 1);
+    if (confirm("Are you sure to delete?")) {
+      this.tasks.splice(index, 1);
+    }
   }
 
   formatDate(date) {
