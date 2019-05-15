@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Task} from './Task';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,18 @@ import {Component} from '@angular/core';
 export class AppComponent {
   newTask = null;
 
-  tasks = [
-    {name: "Task 1", date: new Date(), completed: false},
-    {name: "Task 2", date: new Date(), completed: true},
-    {name: "Task 3", date: new Date(), completed: false},
+  tasks: Task[] = [
+    {name: 'Task 1', date: new Date(), completed: false},
+    {name: 'Task 2', date: new Date(), completed: true},
+    {name: 'Task 3', date: new Date(), completed: false},
   ];
 
-
   toggleCompleted(item) {
-    item.completed = !item.completed
+    item.completed = !item.completed;
   }
 
   addTask() {
-    console.log("addTask was called");
+    console.log('addTask was called');
 
     this.tasks.push({
       name: this.newTask,
@@ -28,14 +28,14 @@ export class AppComponent {
       completed: false
     });
 
-    this.newTask = null
+    this.newTask = null;
   }
 
   deleteTask(index) {
-    this.tasks.splice(index, 1)
+    this.tasks.splice(index, 1);
   }
 
-  formatDate(date){
-    return date.toLocaleDateString("en-US")
+  formatDate(date) {
+    return date.toLocaleDateString('en-US');
   }
 }
