@@ -4,16 +4,13 @@ language: node_js
 node_js:
   - "12"
 
-# Install yarn
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH="$HOME/.yarn/bin:$PATH"
+#before_install:
 
 install:
   - yarn install --non-interactive
 
 script:
-  - yarn run build
+  - yarn run build:prod
 
 #after_success:
 
