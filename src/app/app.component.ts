@@ -33,7 +33,7 @@ export class AppComponent {
   }
 
   deleteTask(index) {
-    if (confirm("Are you sure to delete?")) {
+    if (confirm('Are you sure to delete?')) {
       this.tasks.splice(index, 1);
     }
   }
