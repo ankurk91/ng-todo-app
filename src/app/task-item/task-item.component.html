@@ -1,0 +1,20 @@
+<li class="list-group-item mb-1" [class.table-success]="task.completed">
+  <div class="row">
+    <div class="col-md-6">
+      {{task.name}}
+    </div>
+    <div class="col-md-2">
+      {{formatDate(task.date)}}
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn mr-3 btn-success" [class.btn-warning]="task.completed"
+              (click)="onToggle(task)">
+        {{task.completed ? 'Un-Done' : 'Done'}}
+      </button>
+
+      <button type="button" class="btn btn-danger" (click)="onDelete(index)">
+        Delete
+      </button>
+    </div>
+  </div>
+</li>

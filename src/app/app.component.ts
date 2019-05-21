@@ -15,10 +15,6 @@ export class AppComponent {
     {name: 'Task 3', date: new Date(), completed: false},
   ];
 
-  toggleCompleted(item) {
-    item.completed = !item.completed;
-  }
-
   addTask() {
     console.log('addTask was called');
 
@@ -38,7 +34,8 @@ export class AppComponent {
     }
   }
 
-  formatDate(date) {
-    return date.toLocaleDateString('en-US');
+  toggleCompleted(item) {
+    item.completed = !item.completed;
   }
+
 }
