@@ -22,6 +22,7 @@
     <ul class="list-group">
       <app-task-item *ngFor="let task of tasks"
         [task]="task"
+        [index]="index"
         (clickedDelete)="deleteTask(index)"
         (clickedToggle)="toggleCompleted(task)"
       >

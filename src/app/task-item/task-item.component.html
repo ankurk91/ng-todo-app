@@ -8,11 +8,11 @@
     </div>
     <div class="col-md-4">
       <button type="button" class="btn mr-3 btn-success" [class.btn-warning]="task.completed"
-              (click)="onToggle(task)">
+              (click)="onToggle()">
         {{task.completed ? 'Un-Done' : 'Done'}}
       </button>
 
-      <button type="button" class="btn btn-danger" (click)="onDelete(index)">
+      <button type="button" class="btn btn-danger" (click)="onDelete()">
         Delete
       </button>
     </div>

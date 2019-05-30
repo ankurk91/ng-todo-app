@@ -8,6 +8,7 @@ import {Task} from '../Task';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: Task;
+  @Input() index: bigint;
 
   @Output() clickedDelete: EventEmitter<any> = new EventEmitter();
   @Output() clickedToggle: EventEmitter<any> = new EventEmitter();
@@ -17,12 +18,12 @@ export class TaskItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onDelete(index) {
-    this.clickedDelete.emit(index);
+  onDelete() {
+    this.clickedDelete.emit(this.index);
   }
 
-  onToggle(task) {
-    this.clickedToggle.emit(task);
+  onToggle() {
+    this.clickedToggle.emit(this.task);
   }
 
   formatDate(date) {
