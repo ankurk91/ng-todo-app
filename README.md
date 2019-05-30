@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
+[![Build Status](https://travis-ci.com/ankurk91/ng-todo-app.svg?branch=master)](https://travis-ci.com/ankurk91/ng-todo-app)
+
 ## [Live DEMO](https://ankurk91.github.io/ng-todo-app)
 
 ### Development server
