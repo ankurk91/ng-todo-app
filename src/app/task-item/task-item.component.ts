@@ -26,7 +26,7 @@ export class TaskItemComponent implements OnInit {
   }
 
   formatDate(date) {
-    return date.toLocaleDateString('en-US');
+    return new Date(date).toLocaleDateString('en-US');
   }
 
 }
